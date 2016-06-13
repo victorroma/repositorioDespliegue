@@ -13,7 +13,7 @@ include 'Controlador/controladorEstanteriasLibres.php';
     <body>
 
         <header class="encabezado">
-            LOGO -->HEADER
+<!--            LOGO ->HEADER esto sera comentado-->
 
         </header>
         <nav class="barraNav">
