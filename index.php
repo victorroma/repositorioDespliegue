@@ -14,7 +14,7 @@ include 'Controlador/controladorEstanteriasLibres.php';
 
         <header class="encabezado">
 <!--            LOGO ->HEADER esto sera comentado-->
-
+<p>Se ha añadido</p>
         </header>
         <nav class="barraNav">
             Gestion general -->NAV
