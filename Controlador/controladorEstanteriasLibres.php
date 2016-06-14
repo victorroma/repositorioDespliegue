@@ -2,4 +2,4 @@
 
 include 'DAO/Operaciones.php';
 
-$estanterias= Operaciones::obtenerEstanteriasLibres();
+$estanterias = Operaciones::obtenerEstanteriasLibres();

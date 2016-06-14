@@ -1,4 +1,5 @@
 <?php
+
 include_once '../DAO/Operaciones.php';
 include_once '../Modelo/Ocupacion.php';
 include_once '../Modelo/Caja.php';

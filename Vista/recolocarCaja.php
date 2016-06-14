@@ -52,7 +52,7 @@ $arrayIdesEstanteriasLibres = $_SESSION['arrayIdesEstanteriasLibres']
             <select name="codCajaNegra">
                 <?php
                 foreach ($arrayCajasNegras as $caj) {
-                    echo "<option>" . $caj. "</option>";
+                    echo "<option>" . $caj . "</option>";
                 }
                 ?>
             </select>
@@ -60,7 +60,7 @@ $arrayIdesEstanteriasLibres = $_SESSION['arrayIdesEstanteriasLibres']
             <select name="codCajaSorpresa">
                 <?php
                 foreach ($arrayCajasSorpresas as $caj) {
-                    echo "<option>" . $caj. "</option>";
+                    echo "<option>" . $caj . "</option>";
                 }
                 ?>
             </select>
@@ -68,15 +68,15 @@ $arrayIdesEstanteriasLibres = $_SESSION['arrayIdesEstanteriasLibres']
             <select name="codCajaFuerte">
                 <?php
                 foreach ($arrayCajasFuerte as $caj) {
-                    echo "<option>" . $caj. "</option>";
+                    echo "<option>" . $caj . "</option>";
                 }
                 ?>
             </select>
             <br>
-            
 
-        <p><input type="submit"></p>
-    </form>
 
-</body>
+            <p><input type="submit"></p>
+        </form>
+
+    </body>
 </html>

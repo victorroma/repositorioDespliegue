@@ -1,11 +1,12 @@
 <?php
 
 class Ocupacion {
+
     private $idEstanteria;
     private $nEstante;
     private $idCaja;
     private $tipo;
-    
+
     function __construct($idEstanteria, $nLeja, $tipo, $idCaja = NULL) {
         $this->idEstanteria = $idEstanteria;
         $this->nEstante = $nLeja;
@@ -25,7 +26,6 @@ class Ocupacion {
         $this->nEstante = $nEstante;
     }
 
-    
     function getIdCaja() {
         return $this->idCaja;
     }
@@ -38,8 +38,6 @@ class Ocupacion {
         $this->idEstanteria = $idEstanteria;
     }
 
-    
-
     function setIdCaja($idCaja) {
         $this->idCaja = $idCaja;
     }
@@ -48,7 +46,4 @@ class Ocupacion {
         $this->tipo = $tipo;
     }
 
-
-    
-    
 }

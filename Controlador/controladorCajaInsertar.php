@@ -1,4 +1,5 @@
 <?php
+
 include_once '../Modelo/Caja.php';
 include_once '../Modelo/CajaNegra.php';
 include_once '../Modelo/CajaSorpresa.php';
@@ -36,7 +37,7 @@ switch ($tipo) {
         $cajaSorpresa = new CajaSorpresa($altura, $anchura, $profundidad, $color, $sorpresa);
         $ocupacion = new Ocupacion($idEstanteria, $estante, 'sorpresa');
         $devolucion = Operaciones::insertarCajaSorpresa($cajaSorpresa, $ocupacion);
-        break; 
+        break;
 }
 
 if ($devolucion) {

@@ -14,12 +14,12 @@ $_SESSION['idEstanteriaRecolocar'] = $idEstanteria;
 
 if ($tipo == 'f') {
     $_SESSION['idCajaRecolocar'] = $idCajaFuerte;
-     $_SESSION['tipoCajaRecolocar'] = $tipo;
+    $_SESSION['tipoCajaRecolocar'] = $tipo;
 } else if ($tipo == 's') {
     $_SESSION['idCajaRecolocar'] = $idCajaSorpresa;
     $_SESSION['tipoCajaRecolocar'] = $tipo;
 } else if ($tipo == 'n')/* negra */ {
-   echo $_SESSION['idCajaRecolocar'] = $idCajaNegra;
+    echo $_SESSION['idCajaRecolocar'] = $idCajaNegra;
     $_SESSION['tipoCajaRecolocar'] = $tipo;
 }
 

@@ -5,7 +5,7 @@ class CajaNegra extends Caja {
     private $placa;
 
     //CONTRUCTOR
-    function __construct($altura, $anchura, $profundidad, $color,  $placa) {
+    function __construct($altura, $anchura, $profundidad, $color, $placa) {
         parent::__construct($altura, $anchura, $profundidad, $color);
         $this->placa = $placa;
     }
@@ -20,7 +20,7 @@ class CajaNegra extends Caja {
     }
 
     //TOSTRING
-        public function __toString() {
+    public function __toString() {
         return parent::__toString() . " placa: " . $this->placa . "<br";
     }
 

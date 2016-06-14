@@ -9,14 +9,12 @@ class Estanteria {
     private $numero;
     private $ocupadas;
 
-    
-    public function __construct( $max, $material, $pasillo, $numero, $ocupadas=0) {
+    public function __construct($max, $material, $pasillo, $numero, $ocupadas = 0) {
         $this->max = $max;
         $this->material = $material;
         $this->pasillo = $pasillo;
         $this->numero = $numero;
         $this->ocupadas = $ocupadas;
-        
     }
 
     public function getId() {

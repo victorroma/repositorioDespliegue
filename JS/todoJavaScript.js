@@ -24,17 +24,16 @@ function obtenerEstantesLibres(id_estanteria) {
     }
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
-    }
-    else {
+    } else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("ESTANTESLIBRES").innerHTML = xmlhttp.responseText;
@@ -42,17 +41,17 @@ function obtenerEstantesLibres(id_estanteria) {
     }
     xmlhttp.open("GET", "Controlador/controladorEstantesLibres.php?id_estanteria=" + id_estanteria, true);
     xmlhttp.send();
-    
-    
+
+
 }
 
 
 
-function zetaIndex (){
+function zetaIndex() {
     var primeraColumna;
     var segundaColumna;
     var terceraColumna;
-    
+
 }
 
 

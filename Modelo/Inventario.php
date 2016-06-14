@@ -27,7 +27,7 @@ class Inventario {
     }
 
     public function __toString() {
-        return "estanteriasCaja======>". $this->getEstanteriasCaja();
+        return "estanteriasCaja======>" . $this->getEstanteriasCaja();
     }
 
 }

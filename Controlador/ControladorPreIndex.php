@@ -7,8 +7,8 @@ $contraseña = $_REQUEST['contraseña'];
 
 $resultado = Operaciones::login($nombre, $contraseña);
 
-if($resultado){
+if ($resultado) {
     header('Location:../index.php');
-}else{
+} else {
     header('Location:../Vista/usuarioNoEncontrado.php');
 }

@@ -7,7 +7,7 @@ session_start();
 $codigo = $_SESSION['codigo'];
 $tipo = $_REQUEST['tipo'];
 
-$cajaPaBorrar= Operaciones::obtenerDatosCajaYOcupacion($codigo, $tipo);
+$cajaPaBorrar = Operaciones::obtenerDatosCajaYOcupacion($codigo, $tipo);
 
 $_SESSION['cajaPaBorrar'] = $cajaPaBorrar;
 

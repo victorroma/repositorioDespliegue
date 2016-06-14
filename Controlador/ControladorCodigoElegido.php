@@ -8,4 +8,3 @@ $_SESSION['codigo'] = $_REQUEST['codigo'];
 header('Location:../Vista/elegirLeja.php');
 
 
- 

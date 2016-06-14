@@ -10,9 +10,9 @@ session_start();
 
 
 //obtenemos los id de cada tipo de caja
-echo $cajasFuertes= Operaciones::obtenerCajasFuertes();
-echo $cajasNegras= Operaciones::obtenerCajasNegras();
-echo $cajasSopresas= Operaciones::obtenerCajasSorpresas();
+echo $cajasFuertes = Operaciones::obtenerCajasFuertes();
+echo $cajasNegras = Operaciones::obtenerCajasNegras();
+echo $cajasSopresas = Operaciones::obtenerCajasSorpresas();
 
 echo $_SESSION['arrayCajasFuertes'] = $cajasFuertesBackUp;
 echo $_SESSION['arrayCajasNegras'] = $cajasNegrasBackUp;

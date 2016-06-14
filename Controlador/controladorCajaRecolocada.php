@@ -1,2 +1,3 @@
 <?php
-   header('Location:../Vista/dondeRecolocar.php');
+
+header('Location:../Vista/dondeRecolocar.php');

@@ -7,7 +7,6 @@ and open the template in the editor.
 <?php
 session_start();
 //$estantesLibresRec = 
-         
 ?>
 <html>
     <head>
@@ -17,20 +16,18 @@ session_start();
     <body>
         <h3>Selecciona el estante de la estanteria donde desea recolocar la caja</h3>
         <form action="../Controlador/controladorTerminarRecolocacion.php" >
-        <?php // echo $_SESSION['estLibRecCaj']; ?>
+            <?php // echo $_SESSION['estLibRecCaj'];  ?>
             <select name="estanteSeleccionado">
-            <?php 
-            
-            $x =$_SESSION['estLibRecCaj'];
-            foreach ($x as $value) {
-                echo '<option>' . $value . '</option>';
-            }
-            
-            ?>
-        </select>
-            
+                <?php
+                $x = $_SESSION['estLibRecCaj'];
+                foreach ($x as $value) {
+                    echo '<option>' . $value . '</option>';
+                }
+                ?>
+            </select>
+
             <button type="submit">Aceptar</button>
-            </form>
-<?php echo $_SESSION['tipoCajaRecolocar']; ?>
+        </form>
+        <?php echo $_SESSION['tipoCajaRecolocar']; ?>
     </body>
 </html>

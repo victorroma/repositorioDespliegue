@@ -32,7 +32,6 @@ class Operaciones {
         }
         return $array;
     }
-    
 
     static function obtenerCajasFuertes() {
         include_once '../Modelo/Estanteria.php';
@@ -44,6 +43,7 @@ class Operaciones {
         }
         return $array;
     }
+
     static function obtenerCajasSorpresas() {
         include_once '../Modelo/Estanteria.php';
         global $conexion;
@@ -54,6 +54,7 @@ class Operaciones {
         }
         return $array;
     }
+
     static function obtenerCajasNegras() {
         include_once '../Modelo/Estanteria.php';
         global $conexion;
@@ -64,6 +65,7 @@ class Operaciones {
         }
         return $array;
     }
+
     static function obtenerBackupCajaFuerte() {
         include_once '../Modelo/Estanteria.php';
         global $conexion;
@@ -421,7 +423,7 @@ class Operaciones {
 
     static function obtenerIdEstanteriaPorCodCaja($idCaja) {
         global $conexion;
-        $idEstanteria="";
+        $idEstanteria = "";
         $res = mysqli_query($conexion, "SELECT ID_ESTANTERIA  FROM OCUPACION where "
                 . "id_caja=$idCaja");
         foreach ($res as $fila) {
@@ -590,7 +592,7 @@ class Operaciones {
         include_once '../Modelo/CajaFuerte.php';
         include_once '../Modelo/CajaNegra.php';
         include_once'../Modelo/CajaSorpresa.php';
-        
+
         switch ($tipo) {
             case 'n':
                 $query = "SELECT * from CAJANEGRA_BACKUP WHERE ID=$codigo;";
@@ -639,12 +641,12 @@ class Operaciones {
         include_once '../Modelo/CajaNegra.php';
         include_once'../Modelo/CajaSorpresa.php';
         $conexion->autocommit(false);
-        if( $tipoCaja=='f'){
-            $tipoCaja="fuerte";
-        }else if($tipoCaja=='s'){
-            $tipoCaja='sorpresa';
-        }else if($tipoCaja=='n'){
-            $tipoCaja='negra';
+        if ($tipoCaja == 'f') {
+            $tipoCaja = "fuerte";
+        } else if ($tipoCaja == 's') {
+            $tipoCaja = 'sorpresa';
+        } else if ($tipoCaja == 'n') {
+            $tipoCaja = 'negra';
         }
 
         switch ($tipoCaja) {
@@ -661,17 +663,17 @@ class Operaciones {
 
                 $query2 = "INSERT INTO CAJAFUERTE VALUES ($cajaId,$cajaAltura,$cajaAnchura, $cajaProfundidad, '$cajaColor', '$cajaPropiedad' );";
                 $SQLq2 = mysqli_query($conexion, $query2);
-                
+
                 $query3 = "UPDATE ESTANTERIA SET OCUPADAS = OCUPADAS + 1 WHERE ID = $idEstanteria";
                 $SQLq3 = mysqli_query($conexion, $query3);
-                
+
                 $query4 = "INSERT INTO OCUPACION VALUES ($idEstanteria,$nEstante,$cajaId,'fuerte');";
                 $SQLq4 = mysqli_query($conexion, $query4);
 
-                if($query1 && $query2 && $query3 && $query4){
+                if ($query1 && $query2 && $query3 && $query4) {
                     $conexion->commit();
                     return true;
-                }else{
+                } else {
                     $conexion->rollback();
                 }
 //                return $query1." ____  ".$query2." ____  ".$query3." ____  ".$query4;
@@ -688,17 +690,17 @@ class Operaciones {
 
                 $query2 = "INSERT INTO CAJANEGRA VALUES ($cajaId,$cajaAltura,$cajaAnchura, $cajaProfundidad, '$cajaColor', '$cajaPropiedad' );";
                 $SQLq2 = mysqli_query($conexion, $query2);
-                
+
                 $query3 = "UPDATE ESTANTERIA SET OCUPADAS = OCUPADAS + 1 WHERE ID = $idEstanteria";
                 $SQLq3 = mysqli_query($conexion, $query3);
-                
+
                 $query4 = "INSERT INTO OCUPACION VALUES ($idEstanteria,$nEstante,$cajaId,'negra');";
                 $SQLq4 = mysqli_query($conexion, $query4);
 
-                if($query1 && $query2 && $query3 && $query4){
+                if ($query1 && $query2 && $query3 && $query4) {
                     $conexion->commit();
                     return true;
-                }else{
+                } else {
                     $conexion->rollback();
                 }
 //                return $query1." ____  ".$query2." ____  ".$query3." ____  ".$query4;
@@ -715,22 +717,22 @@ class Operaciones {
 
                 $query2 = "INSERT INTO CAJASORPRESA VALUES ($cajaId,$cajaAltura,$cajaAnchura, $cajaProfundidad, '$cajaColor', '$cajaPropiedad' );";
                 $SQLq2 = mysqli_query($conexion, $query2);
-                
+
                 $query3 = "UPDATE ESTANTERIA SET OCUPADAS = OCUPADAS + 1 WHERE ID = $idEstanteria";
                 $SQLq3 = mysqli_query($conexion, $query3);
-                
+
                 $query4 = "INSERT INTO OCUPACION VALUES ($idEstanteria,$nEstante,$cajaId,'sorpresa');";
                 $SQLq4 = mysqli_query($conexion, $query4);
 
-                if($query1 && $query2 && $query3 && $query4){
+                if ($query1 && $query2 && $query3 && $query4) {
                     $conexion->commit();
                     return true;
-                }else{
+                } else {
                     $conexion->rollback();
                 }
 //                return $query1." ____  ".$query2." ____  ".$query3." ____  ".$query4;
 
-            
+
             default:
                 break;
         }

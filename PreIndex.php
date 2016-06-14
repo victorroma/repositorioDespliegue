@@ -14,7 +14,7 @@
             <p>Nombre<input type="text" name="nombre"></p>
             <p>Contraseña<input type="text" name="contraseña"></p>
             <p><input type="submit"></p>
-            
+
         </form>
     </body>
 </html>

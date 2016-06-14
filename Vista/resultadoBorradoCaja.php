@@ -1,7 +1,7 @@
 <?php
 session_start();
 //$_SESSION["resultado"] = TRUE;
-$resultado = $_SESSION["resultado"];//error de variable de sesion
+$resultado = $_SESSION["resultado"]; //error de variable de sesion
 if ($resultado) {
     echo "La caja se ha borrado<br>";
 } else {

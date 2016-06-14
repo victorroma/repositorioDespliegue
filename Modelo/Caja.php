@@ -26,7 +26,7 @@ abstract class Caja {
         $this->id = $id;
     }
 
-        function getColor() {
+    function getColor() {
         return $this->color;
     }
 
@@ -58,8 +58,7 @@ abstract class Caja {
         $this->profundidad = $profundidad;
     }
 
-
-        public function __toString() {
+    public function __toString() {
         return "Altura: " . $this->altura . ", anchura: " . $this->anchura . ", profundidad: " . $this->profundidad . ", color: " . $this->color;
     }
 

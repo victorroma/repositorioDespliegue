@@ -60,11 +60,11 @@ print_r($inventario);
                     ?>
                     <tr> 
                         <td ><?php
-                echo $estanteria;
-                    ?>
+                            echo $estanteria;
+                            ?>
                         </td>
                         <td ><?php echo $estanteria->getMax(); ?>
-                         echo $inventario; ?>
+                            echo $inventario; ?>
                         </td>  
                         <td ><?php echo $estanteria->getMaterial(); ?>
                         </td>  

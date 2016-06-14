@@ -2,4 +2,4 @@
 
 include '../DAO/Operaciones.php';
 
-$codigos= Operaciones::obtenerCodigosCaja();
+$codigos = Operaciones::obtenerCodigosCaja();
