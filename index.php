@@ -18,6 +18,7 @@ include 'Controlador/controladorEstanteriasLibres.php';
         </header>
         <nav class="barraNav">
             Gestion general -->NAV
+            <p>Esta será la modificacion que haremos en forma de parrafo</p>
         </nav>
 
 
