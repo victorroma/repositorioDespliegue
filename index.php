@@ -19,7 +19,7 @@ include 'Controlador/controladorEstanteriasLibres.php';
         <nav class="barraNav">
             Gestion general -->NAV
             <p>Esta será la modificacion que haremos en forma de parrafo</p>
-            <p>Modificacion que haremos desde NetBeans</p>
+            <p> Modificacion que haremos desde NetBeans</p>
         </nav>
 
 
